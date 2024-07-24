@@ -6,9 +6,9 @@ const sillones = 10000;
 const sommier = 15000;
 const escritorior = 9000;
 
-let eleccionComedor = prompt(eleccionUsuario1);
-let eleccionSillones = prompt(eleccionUsuario2);
-let eleccionSommier = prompt(eleccionUsuario3);
-let eleccionEscritorio = prompt(eleccionUsuario4);
+let eleccionComedor = 0;
+let eleccionSillones = 0;
+let eleccionSommier = 0;
+let eleccionEscritorio = 0;
+ 
 
-hola
