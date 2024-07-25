@@ -1,6 +1,6 @@
 alert("Bienvenido a Mueblería FEBE");
 alert("A continuación elija una opción:");
-let eleccion = "0"; // Inicializamos como string para evitar confusiones
+let eleccion = "0"; 
 const juegoComedor = 12000;
 const sillones = 10000;
 const sommier = 15000;
@@ -43,7 +43,7 @@ while (eleccion !== "6") {
       );
       break;
     case "6":
-      break; // Finaliza el bucle cuando el usuario elige finalizar
+      break; 
     default:
       alert("Opción inválida. Por favor, elija una opción válida.");
   }
