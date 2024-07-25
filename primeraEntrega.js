@@ -39,7 +39,7 @@ while (eleccion !== "6") {
       break;
     case "5":
       alert(
-        `Precios:\nJuego de comedor: $${juegoComedor}\nSillones: $${sillones}\nSommier: $${sommier}\nEscritorio: $${escritorio}`
+        `Precios:\nJuego de comedor: ${juegoComedor}\nSillones: ${sillones}\nSommier: ${sommier}\nEscritorio: ${escritorio}`
       );
       break;
     case "6":
@@ -55,3 +55,12 @@ const totalCompra =
   eleccionSommier * sommier +
   eleccionEscritorio * escritorio;
 alert(`El total de su compra es: $${totalCompra}`);
+
+let cantidadDeCuotas ="0"
+let cuotas = prompt("¿desea hacerlo en cuotas? hasta 3 sin recargo")
+if (cuotas==="si"){
+  parseInt(prompt("cantidad \n1) Cuotas \n2) Cuotas \n3) Cuotas \n4) Cuotas \n5) Cuotas \n6) Cuotas") );
+}
+else{
+  alert("gracias por su compra");
+}
