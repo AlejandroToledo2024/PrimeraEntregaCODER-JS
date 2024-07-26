@@ -1,6 +1,6 @@
 alert("Bienvenido a Mueblería FEBE");
 alert("A continuación elija una opción:");
-let eleccion = "0"; 
+let eleccion = "0";
 const juegoComedor = 12000;
 const sillones = 10000;
 const sommier = 15000;
@@ -43,7 +43,7 @@ while (eleccion !== "6") {
       );
       break;
     case "6":
-      break; 
+      break;
     default:
       alert("Opción inválida. Por favor, elija una opción válida.");
   }
@@ -56,11 +56,29 @@ const totalCompra =
   eleccionEscritorio * escritorio;
 alert(`El total de su compra es: $${totalCompra}`);
 
-let cantidadDeCuotas ="0"
-let cuotas = prompt("¿desea hacerlo en cuotas? hasta 3 sin recargo")
-if (cuotas==="si"){
-  parseInt(prompt("cantidad \n1) Cuotas \n2) Cuotas \n3) Cuotas \n4) Cuotas \n5) Cuotas \n6) Cuotas") );
-}
-else{
+let cuotaDos = totalCompra / 2;
+
+let cuotaTres= totalCompra / 3;
+
+let cuotaCuatro= parseFloat(totalCompra) * 1.10 / 4;
+
+let cuotaCinco= parseFloat(totalCompra) * 1.10 /5;
+
+let cuotaSeis = parseFloat(totalCompra) * 1.10/ 6;
+
+
+
+
+let cantidadDeCuotas = "0";
+let cuotas = prompt("¿desea hacerlo en cuotas? hasta 3 sin recargo");
+if (cuotas === "si") {
+  parseInt(
+    prompt(
+      `cantidad \n1 Cuota de $${totalCompra} \n2 Cuotas de $${cuotaDos} \n3 Cuotas de $${cuotaTres} \n4 Cuotas de $${cuotaCuatro.toFixed(0)} (10%+) \n5 Cuotas de $${cuotaCinco.toFixed(0) } (10%+)  \n6 Cuotas de $${cuotaSeis.toFixed(0)} (10%+) `
+    )
+    );
+    alert("Transaccion realizada , !gracias por su compra!")
+} else {
   alert("gracias por su compra");
 }
+//`hola mundo ${variable}`
