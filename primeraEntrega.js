@@ -58,26 +58,27 @@ alert(`El total de su compra es: $${totalCompra}`);
 
 let cuotaDos = totalCompra / 2;
 
-let cuotaTres= totalCompra / 3;
+let cuotaTres = totalCompra / 3;
 
-let cuotaCuatro= parseFloat(totalCompra) * 1.10 / 4;
+let cuotaCuatro = (parseFloat(totalCompra) * 1.1) / 4;
 
-let cuotaCinco= parseFloat(totalCompra) * 1.10 /5;
+let cuotaCinco = (parseFloat(totalCompra) * 1.1) / 5;
 
-let cuotaSeis = parseFloat(totalCompra) * 1.10/ 6;
-
-
-
+let cuotaSeis = (parseFloat(totalCompra) * 1.1) / 6;
 
 let cantidadDeCuotas = "0";
 let cuotas = prompt("¿desea hacerlo en cuotas? hasta 3 sin recargo");
 if (cuotas === "si") {
   parseInt(
     prompt(
-      `cantidad \n1 Cuota de $${totalCompra} \n2 Cuotas de $${cuotaDos} \n3 Cuotas de $${cuotaTres} \n4 Cuotas de $${cuotaCuatro.toFixed(0)} (10%+) \n5 Cuotas de $${cuotaCinco.toFixed(0) } (10%+)  \n6 Cuotas de $${cuotaSeis.toFixed(0)} (10%+) `
+      `cantidad \n1 Cuota de $${totalCompra} \n2 Cuotas de $${cuotaDos} \n3 Cuotas de $${cuotaTres} \n4 Cuotas de $${cuotaCuatro.toFixed(
+        0
+      )} (10%+) \n5 Cuotas de $${cuotaCinco.toFixed(
+        0
+      )} (10%+)  \n6 Cuotas de $${cuotaSeis.toFixed(0)} (10%+) `
     )
-    );
-    alert("Transaccion realizada , !gracias por su compra!")
+  );
+  alert("Transaccion realizada , !gracias por su compra!");
 } else {
   alert("gracias por su compra");
 }
