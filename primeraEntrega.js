@@ -75,7 +75,7 @@ const totalCompra =
 
 alert(`El total de su compra es: $${totalCompra}`);
 
-let cuotas = prompt("¿Desea hacerlo en cuotas? Hasta 3 cuotas sin recargo. Escriba el número de cuotas o 'no' para pagar al contado.");
+let cuotas = prompt("¿Desea hacerlo en cuotas? Hasta 3 cuotas sin recargo. Escriba el número de cuotas (hasta 6) o 'no' para pagar al contado.");
 
 if (cuotas.toLowerCase() !== "no") {
   cuotas = parseInt(cuotas);
