@@ -1,6 +1,6 @@
 alert("Bienvenido a Mueblería FEBE");
 alert("A continuación elija una opción:");
-let eleccion = "0";
+
 const juegoComedor = 12000;
 const sillones = 10000;
 const sommier = 15000;
@@ -10,6 +10,24 @@ let eleccionComedor = 0;
 let eleccionSillones = 0;
 let eleccionSommier = 0;
 let eleccionEscritorio = 0;
+
+function calcularCuotas(totalCompra, cantidadCuotas) {
+  let cuota;
+  if (cantidadCuotas === 1) {
+    cuota = totalCompra;
+  } else if (cantidadCuotas === 2) {
+    cuota = totalCompra / 2;
+  } else if (cantidadCuotas === 3) {
+    cuota = totalCompra / 3;
+  } else if (cantidadCuotas >= 4 && cantidadCuotas <= 6) {
+    cuota = (totalCompra * 1.1) / cantidadCuotas;
+  } else {
+    cuota = totalCompra;
+  }
+  return cuota.toFixed(0);
+}
+
+let eleccion = "0";
 
 while (eleccion !== "6") {
   eleccion = prompt(
@@ -54,32 +72,19 @@ const totalCompra =
   eleccionSillones * sillones +
   eleccionSommier * sommier +
   eleccionEscritorio * escritorio;
+
 alert(`El total de su compra es: $${totalCompra}`);
 
-let cuotaDos = totalCompra / 2;
+let cuotas = prompt("¿Desea hacerlo en cuotas? Hasta 3 cuotas sin recargo. Escriba el número de cuotas o 'no' para pagar al contado.");
 
-let cuotaTres = totalCompra / 3;
-
-let cuotaCuatro = (parseFloat(totalCompra) * 1.1) / 4;
-
-let cuotaCinco = (parseFloat(totalCompra) * 1.1) / 5;
-
-let cuotaSeis = (parseFloat(totalCompra) * 1.1) / 6;
-
-let cantidadDeCuotas = "0";
-let cuotas = prompt("¿desea hacerlo en cuotas? hasta 3 sin recargo");
-if (cuotas === "si") {
-  parseInt(
-    prompt(
-      `cantidad \n1 Cuota de $${totalCompra} \n2 Cuotas de $${cuotaDos} \n3 Cuotas de $${cuotaTres} \n4 Cuotas de $${cuotaCuatro.toFixed(
-        0
-      )} (10%+) \n5 Cuotas de $${cuotaCinco.toFixed(
-        0
-      )} (10%+)  \n6 Cuotas de $${cuotaSeis.toFixed(0)} (10%+) `
-    )
-  );
-  alert("Transaccion realizada , !gracias por su compra!");
+if (cuotas.toLowerCase() !== "no") {
+  cuotas = parseInt(cuotas);
+  if (cuotas >= 1 && cuotas <= 6) {
+    let montoCuota = calcularCuotas(totalCompra, cuotas);
+    alert(`Su compra en ${cuotas} cuotas será de $${montoCuota} por cuota.`);
+  } else {
+    alert("Número de cuotas no válido. Se aplicará el pago al contado.");
+  }
 } else {
-  alert("gracias por su compra");
+  alert("Gracias por su compra.");
 }
-//`hola mundo ${variable}`
